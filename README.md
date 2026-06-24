@@ -47,7 +47,7 @@ Total Rules: 7
 Total Disease Categories: 7
 Installation
 Clone the repository:
-git clone https://github.com/tiaraaulia1425/parkinson-expert-system-bayes.git
+git clone https://github.com/nurulsalmaafifah-oss/parkinson-expert-system-bayes.git
 Move the project to:
 xampp/htdocs/
 Import the database:
