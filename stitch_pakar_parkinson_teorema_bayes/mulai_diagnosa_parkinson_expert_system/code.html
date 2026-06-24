@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ParkinsonExpert - Diagnosis Form</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "inverse-on-surface": "#eff1f3",
+                      "secondary-fixed": "#dae2fd",
+                      "tertiary-container": "#007d55",
+                      "on-primary-fixed": "#00174b",
+                      "on-tertiary-fixed-variant": "#005236",
+                      "on-primary": "#ffffff",
+                      "inverse-primary": "#b4c5ff",
+                      "on-secondary-container": "#5c647a",
+                      "on-error": "#ffffff",
+                      "on-surface": "#191c1e",
+                      "surface": "#f7f9fb",
+                      "error-container": "#ffdad6",
+                      "secondary-fixed-dim": "#bec6e0",
+                      "outline-variant": "#c3c6d7",
+                      "on-secondary-fixed": "#131b2e",
+                      "surface-dim": "#d8dadc",
+                      "surface-container-lowest": "#ffffff",
+                      "secondary-container": "#dae2fd",
+                      "surface-variant": "#e0e3e5",
+                      "error": "#ba1a1a",
+                      "inverse-surface": "#2d3133",
+                      "secondary": "#565e74",
+                      "primary-fixed": "#dbe1ff",
+                      "surface-bright": "#f7f9fb",
+                      "on-tertiary-container": "#bdffdb",
+                      "on-surface-variant": "#434655",
+                      "surface-container-highest": "#e0e3e5",
+                      "on-tertiary-fixed": "#002113",
+                      "surface-container": "#eceef0",
+                      "on-background": "#191c1e",
+                      "tertiary-fixed": "#6ffbbe",
+                      "tertiary-fixed-dim": "#4edea3",
+                      "surface-container-high": "#e6e8ea",
+                      "on-primary-fixed-variant": "#003ea8",
+                      "on-primary-container": "#eeefff",
+                      "on-secondary": "#ffffff",
+                      "on-secondary-fixed-variant": "#3f465c",
+                      "tertiary": "#006242",
+                      "surface-container-low": "#f2f4f6",
+                      "primary-fixed-dim": "#b4c5ff",
+                      "primary": "#004ac6",
+                      "on-tertiary": "#ffffff",
+                      "background": "#f7f9fb",
+                      "primary-container": "#2563eb",
+                      "surface-tint": "#0053db",
+                      "on-error-container": "#93000a",
+                      "outline": "#737686"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "sm": "12px",
+                      "xs": "4px",
+                      "lg": "32px",
+                      "margin-mobile": "16px",
+                      "gutter": "24px",
+                      "xl": "48px",
+                      "margin-desktop": "40px",
+                      "md": "24px",
+                      "base": "8px"
+              },
+              "fontFamily": {
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "body-sm": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "headline-sm": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "Inter"
+                      ],
+                      "headline-lg-mobile": [
+                              "Inter"
+                      ],
+                      "label-sm": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-sm": [
+                              "20px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "fontWeight": "500"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="sticky top-0 z-50 flex justify-between items-center w-full px-margin-desktop bg-surface dark:bg-inverse-surface h-16 border-b border-outline-variant dark:border-outline">
+<div class="flex items-center gap-md">
+<span class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed tracking-tight">ParkinsonExpert</span>
+</div>
+<div class="hidden md:flex gap-lg">
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors flex items-center justify-center" href="#">
+                Home
+            </a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors flex items-center justify-center" href="#">
+                Login
+            </a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors flex items-center justify-center" href="#">
+                Info
+            </a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-grow p-margin-mobile md:p-margin-desktop w-full max-w-7xl mx-auto flex gap-gutter">
+<!-- Main Form Container -->
+<div class="flex-grow flex flex-col gap-lg w-full">
+<div class="mb-sm">
+<h1 class="font-headline-lg text-headline-lg text-on-surface mb-xs">Diagnosis Form</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Please fill in the patient details and select observed symptoms carefully.</p>
+</div>
+<form action="#" class="flex flex-col gap-lg" method="POST">
+<!-- Patient Info Card -->
+<div class="bg-surface-container-lowest rounded-lg border border-outline-variant p-md shadow-sm">
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-md pb-xs border-b border-outline-variant">Patient Information</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<!-- Name Input -->
+<div class="flex flex-col gap-xs">
+<label class="font-label-md text-label-md text-on-surface" for="patientName">Patient Name</label>
+<input class="h-10 px-sm border border-outline-variant rounded-DEFAULT bg-surface text-on-surface font-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors" id="patientName" name="patientName" placeholder="Enter full name" required="" type="text"/>
+</div>
+<!-- Age Input -->
+<div class="flex flex-col gap-xs">
+<label class="font-label-md text-label-md text-on-surface" for="patientAge">Age</label>
+<input class="h-10 px-sm border border-outline-variant rounded-DEFAULT bg-surface text-on-surface font-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors" id="patientAge" max="150" min="0" name="patientAge" placeholder="e.g. 65" required="" type="number"/>
+</div>
+<!-- Gender Select -->
+<div class="flex flex-col gap-xs">
+<label class="font-label-md text-label-md text-on-surface" for="patientGender">Gender</label>
+<select class="h-10 px-sm border border-outline-variant rounded-DEFAULT bg-surface text-on-surface font-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors" id="patientGender" name="patientGender" required="">
+<option disabled="" selected="" value="">Select gender</option>
+<option value="male">Male</option>
+<option value="female">Female</option>
+<option value="other">Other</option>
+</select>
+</div>
+<!-- Address Input -->
+<div class="flex flex-col gap-xs md:col-span-2">
+<label class="font-label-md text-label-md text-on-surface" for="patientAddress">Address</label>
+<textarea class="p-sm border border-outline-variant rounded-DEFAULT bg-surface text-on-surface font-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors resize-y" id="patientAddress" name="patientAddress" placeholder="Enter full address" required="" rows="3"></textarea>
+</div>
+</div>
+</div>
+<!-- Symptoms Card -->
+<div class="bg-surface-container-lowest rounded-lg border border-outline-variant p-md shadow-sm">
+<div class="flex justify-between items-center mb-md pb-xs border-b border-outline-variant">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Observed Symptoms</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Select all symptoms present in the patient.</p>
+</div>
+<span class="bg-primary-container text-on-primary-container font-label-sm text-label-sm px-sm py-xs rounded-full">G01 - G46</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-x-gutter gap-y-sm max-h-[500px] overflow-y-auto pr-xs">
+<!-- Symptom G01 -->
+<label class="flex items-start gap-sm p-sm rounded-DEFAULT hover:bg-surface-container-low transition-colors cursor-pointer group">
+<div class="flex items-center h-6">
+<input class="w-4 h-4 text-primary border-outline-variant rounded focus:ring-primary cursor-pointer" name="symptoms[]" type="checkbox" value="G01"/>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface group-hover:text-primary transition-colors">G01</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Merasakan sentakan pada anggota tubuh secara tidak sadar</span>
+</div>
+</label>
+<!-- Symptom G02 -->
+<label class="flex items-start gap-sm p-sm rounded-DEFAULT hover:bg-surface-container-low transition-colors cursor-pointer group">
+<div class="flex items-center h-6">
+<input class="w-4 h-4 text-primary border-outline-variant rounded focus:ring-primary cursor-pointer" name="symptoms[]" type="checkbox" value="G02"/>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface group-hover:text-primary transition-colors">G02</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sentakan pada tangan atau jari saat istirahat</span>
+</div>
+</label>
+<!-- Symptom G03 -->
+<label class="flex items-start gap-sm p-sm rounded-DEFAULT hover:bg-surface-container-low transition-colors cursor-pointer group">
+<div class="flex items-center h-6">
+<input class="w-4 h-4 text-primary border-outline-variant rounded focus:ring-primary cursor-pointer" name="symptoms[]" type="checkbox" value="G03"/>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface group-hover:text-primary transition-colors">G03</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Gerakan melambat secara signifikan (Bradikinesia)</span>
+</div>
+</label>
+<!-- Symptom G04 -->
+<label class="flex items-start gap-sm p-sm rounded-DEFAULT hover:bg-surface-container-low transition-colors cursor-pointer group">
+<div class="flex items-center h-6">
+<input class="w-4 h-4 text-primary border-outline-variant rounded focus:ring-primary cursor-pointer" name="symptoms[]" type="checkbox" value="G04"/>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface group-hover:text-primary transition-colors">G04</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Otot terasa kaku dan tegang</span>
+</div>
+</label>
+<!-- Placeholder for middle symptoms to avoid extremely long HTML -->
+<div class="col-span-1 lg:col-span-2 py-md flex items-center justify-center opacity-50">
+<div class="h-px bg-outline-variant flex-grow"></div>
+<span class="font-body-sm text-body-sm px-sm text-on-surface-variant">... Symptoms G05 to G44 ...</span>
+<div class="h-px bg-outline-variant flex-grow"></div>
+</div>
+<!-- Symptom G45 -->
+<label class="flex items-start gap-sm p-sm rounded-DEFAULT hover:bg-surface-container-low transition-colors cursor-pointer group">
+<div class="flex items-center h-6">
+<input class="w-4 h-4 text-primary border-outline-variant rounded focus:ring-primary cursor-pointer" name="symptoms[]" type="checkbox" value="G45"/>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface group-hover:text-primary transition-colors">G45</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Kesulitan menelan makanan atau minuman</span>
+</div>
+</label>
+<!-- Symptom G46 -->
+<label class="flex items-start gap-sm p-sm rounded-DEFAULT hover:bg-surface-container-low transition-colors cursor-pointer group">
+<div class="flex items-center h-6">
+<input class="w-4 h-4 text-primary border-outline-variant rounded focus:ring-primary cursor-pointer" name="symptoms[]" type="checkbox" value="G46"/>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface group-hover:text-primary transition-colors">G46</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Perubahan drastis pada tekanan darah saat berdiri</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Action Area -->
+<div class="flex justify-end pt-sm border-t border-outline-variant mt-sm">
+<button class="h-10 px-md bg-primary text-on-primary font-label-md text-label-md rounded-DEFAULT hover:bg-on-primary-fixed-variant transition-colors flex items-center gap-xs shadow-sm" type="submit">
+<span class="material-symbols-outlined" style="font-size: 18px;">neurology</span>
+                        Proses Diagnosa
+                    </button>
+</div>
+</form>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-lg px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-md bg-surface-container dark:bg-surface-container-high border-t border-outline-variant mt-auto">
+<div class="font-label-md text-label-md font-semibold text-on-surface">
+            ParkinsonExpert
+        </div>
+<div class="font-body-sm text-body-sm text-secondary dark:text-secondary-fixed">
+            © 2024 Neurological Research Institute. All rights reserved.
+        </div>
+<div class="flex gap-md">
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">Terms of Service</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">Contact Support</a>
+</div>
+</footer>
+</body></html>

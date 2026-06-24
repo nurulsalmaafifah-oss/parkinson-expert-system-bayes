@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Admin Dashboard - ParkinsonExpert</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-on-surface": "#eff1f3",
+                    "secondary-fixed": "#dae2fd",
+                    "tertiary-container": "#007d55",
+                    "on-primary-fixed": "#00174b",
+                    "on-tertiary-fixed-variant": "#005236",
+                    "on-primary": "#ffffff",
+                    "inverse-primary": "#b4c5ff",
+                    "on-secondary-container": "#5c647a",
+                    "on-error": "#ffffff",
+                    "on-surface": "#191c1e",
+                    "surface": "#f7f9fb",
+                    "error-container": "#ffdad6",
+                    "secondary-fixed-dim": "#bec6e0",
+                    "outline-variant": "#c3c6d7",
+                    "on-secondary-fixed": "#131b2e",
+                    "surface-dim": "#d8dadc",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-container": "#dae2fd",
+                    "surface-variant": "#e0e3e5",
+                    "error": "#ba1a1a",
+                    "inverse-surface": "#2d3133",
+                    "secondary": "#565e74",
+                    "primary-fixed": "#dbe1ff",
+                    "surface-bright": "#f7f9fb",
+                    "on-tertiary-container": "#bdffdb",
+                    "on-surface-variant": "#434655",
+                    "surface-container-highest": "#e0e3e5",
+                    "on-tertiary-fixed": "#002113",
+                    "surface-container": "#eceef0",
+                    "on-background": "#191c1e",
+                    "tertiary-fixed": "#6ffbbe",
+                    "tertiary-fixed-dim": "#4edea3",
+                    "surface-container-high": "#e6e8ea",
+                    "on-primary-fixed-variant": "#003ea8",
+                    "on-primary-container": "#eeefff",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-fixed-variant": "#3f465c",
+                    "tertiary": "#006242",
+                    "surface-container-low": "#f2f4f6",
+                    "primary-fixed-dim": "#b4c5ff",
+                    "primary": "#004ac6",
+                    "on-tertiary": "#ffffff",
+                    "background": "#f7f9fb",
+                    "primary-container": "#2563eb",
+                    "surface-tint": "#0053db",
+                    "on-error-container": "#93000a",
+                    "outline": "#737686"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "sm": "12px",
+                    "xs": "4px",
+                    "lg": "32px",
+                    "margin-mobile": "16px",
+                    "gutter": "24px",
+                    "xl": "48px",
+                    "margin-desktop": "40px",
+                    "md": "24px",
+                    "base": "8px"
+            },
+            "fontFamily": {
+                    "label-md": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-sm": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "headline-lg-mobile": ["Inter"],
+                    "label-sm": ["Inter"]
+            },
+            "fontSize": {
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        /* Minimalist scrollbar for main canvas */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #c3c6d7; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #737686; 
+        }
+    </style>
+</head>
+<body class="bg-surface-container-low font-body-md text-on-surface antialiased h-screen overflow-hidden flex">
+<!-- Shared Component: SideNavBar -->
+<aside class="fixed left-0 top-0 h-full w-[280px] bg-inverse-surface shadow-md flex flex-col py-md z-50">
+<!-- Header -->
+<div class="px-md mb-lg flex items-center gap-sm">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center shrink-0 overflow-hidden relative">
+<img alt="Admin User Profile" class="w-full h-full object-cover" data-alt="A professional headshot of a doctor or medical administrator in a bright, modern clinical setting, matching the authoritative and precise brand personality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCO-PNGKa_1yoBMuv12aISaaes7vk_DiHwyk0rM1sPr0ZWiHHBiWqCfLZd02Zl6ZEwnKgPGyOHebOb_egL9q1VrXziNg37_xrsYENwX1LcOb4oKFsHUcKux9ijS8SYvaqtSEr6dM6kqFt6ZlVh8v9VO9ucUdFsetFFZc27NbCixJRguYyk5R-GbY7qglKktmCF-OIXc6fWIFE4wcbnbUojIDfHPt7re4MFALOzZiYQmuWpkufoaiTWRUJ37DgyQmotCMgbPdrsGj5Ze"/>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-surface-bright">Admin Portal</h2>
+<p class="font-label-sm text-label-sm text-surface-variant opacity-80">Expert System Management</p>
+</div>
+</div>
+<!-- CTA -->
+<div class="px-md mb-lg">
+<button class="w-full h-[40px] bg-primary text-on-primary rounded-DEFAULT font-label-md text-label-md flex items-center justify-center gap-xs hover:bg-surface-tint transition-colors shadow-sm">
+<span class="material-symbols-outlined" style="font-size: 18px;">add</span>
+                New Diagnosis
+            </button>
+</div>
+<!-- Navigation Links -->
+<nav class="flex-1 flex flex-col font-label-md text-label-md">
+<!-- Active Tab -->
+<a class="flex items-center gap-sm bg-primary-container text-on-primary-container border-l-4 border-primary px-4 py-3 scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+                Dashboard
+            </a>
+<!-- Inactive Tabs -->
+<a class="flex items-center gap-sm text-surface-variant px-4 py-3 hover:bg-on-secondary-fixed-variant transition-all" href="#">
+<span class="material-symbols-outlined">neurology</span>
+                Disease Data
+            </a>
+<a class="flex items-center gap-sm text-surface-variant px-4 py-3 hover:bg-on-secondary-fixed-variant transition-all" href="#">
+<span class="material-symbols-outlined">format_list_bulleted</span>
+                Symptom Data
+            </a>
+<a class="flex items-center gap-sm text-surface-variant px-4 py-3 hover:bg-on-secondary-fixed-variant transition-all" href="#">
+<span class="material-symbols-outlined">psychology</span>
+                Knowledge Base
+            </a>
+<a class="flex items-center gap-sm text-surface-variant px-4 py-3 hover:bg-on-secondary-fixed-variant transition-all" href="#">
+<span class="material-symbols-outlined">biotech</span>
+                Diagnosis Data
+            </a>
+<a class="flex items-center gap-sm text-surface-variant px-4 py-3 hover:bg-on-secondary-fixed-variant transition-all" href="#">
+<span class="material-symbols-outlined">analytics</span>
+                Reports
+            </a>
+</nav>
+<!-- Footer -->
+<div class="mt-auto pt-md font-label-md text-label-md">
+<a class="flex items-center gap-sm text-surface-variant px-4 py-3 hover:bg-on-secondary-fixed-variant transition-all" href="#">
+<span class="material-symbols-outlined">logout</span>
+                Logout
+            </a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-[280px] flex-1 flex flex-col h-full overflow-y-auto">
+<!-- Top Professional Header -->
+<header class="h-[72px] px-margin-desktop flex items-center justify-between bg-surface border-b border-outline-variant sticky top-0 z-40">
+<div>
+<h1 class="font-headline-md text-headline-md text-on-surface">Overview</h1>
+<p class="font-body-sm text-body-sm text-secondary">Tuesday, October 24, 2023</p>
+</div>
+<div class="flex items-center gap-md">
+<div class="relative">
+<span class="material-symbols-outlined text-secondary cursor-pointer hover:text-primary transition-colors">notifications</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-error rounded-full border border-surface"></span>
+</div>
+<div class="flex items-center gap-sm pl-md border-l border-outline-variant">
+<span class="font-label-md text-label-md text-on-surface">Dr. Sarah Jenkins</span>
+</div>
+</div>
+</header>
+<!-- Dashboard Content -->
+<div class="px-margin-desktop py-lg flex-1 flex flex-col gap-gutter">
+<!-- 4 Stat Cards Row -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Card 1 -->
+<div class="bg-surface rounded-lg border border-outline-variant p-md flex flex-col gap-sm relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-secondary">Total Diseases</span>
+<div class="w-8 h-8 rounded-DEFAULT bg-primary-fixed flex items-center justify-center text-on-primary-fixed-variant">
+<span class="material-symbols-outlined text-[20px]">neurology</span>
+</div>
+</div>
+<div class="font-headline-lg text-headline-lg text-on-surface">142</div>
+<div class="flex items-center gap-xs font-label-sm text-label-sm text-tertiary-container">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+<span>+12 this month</span>
+</div>
+<div class="absolute bottom-0 left-0 w-full h-[2px] bg-outline-variant group-hover:bg-primary transition-colors"></div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface rounded-lg border border-outline-variant p-md flex flex-col gap-sm relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-secondary">Total Symptoms</span>
+<div class="w-8 h-8 rounded-DEFAULT bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed-variant">
+<span class="material-symbols-outlined text-[20px]">format_list_bulleted</span>
+</div>
+</div>
+<div class="font-headline-lg text-headline-lg text-on-surface">856</div>
+<div class="flex items-center gap-xs font-label-sm text-label-sm text-tertiary-container">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+<span>+45 this month</span>
+</div>
+<div class="absolute bottom-0 left-0 w-full h-[2px] bg-outline-variant group-hover:bg-primary transition-colors"></div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface rounded-lg border border-outline-variant p-md flex flex-col gap-sm relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-secondary">Total Diagnoses</span>
+<div class="w-8 h-8 rounded-DEFAULT bg-primary-fixed flex items-center justify-center text-on-primary-fixed-variant">
+<span class="material-symbols-outlined text-[20px]">biotech</span>
+</div>
+</div>
+<div class="font-headline-lg text-headline-lg text-on-surface">3,204</div>
+<div class="flex items-center gap-xs font-label-sm text-label-sm text-tertiary-container">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+<span>+128 this month</span>
+</div>
+<div class="absolute bottom-0 left-0 w-full h-[2px] bg-outline-variant group-hover:bg-primary transition-colors"></div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface rounded-lg border border-outline-variant p-md flex flex-col gap-sm relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-secondary">Total Users</span>
+<div class="w-8 h-8 rounded-DEFAULT bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed-variant">
+<span class="material-symbols-outlined text-[20px]">groups</span>
+</div>
+</div>
+<div class="font-headline-lg text-headline-lg text-on-surface">1,092</div>
+<div class="flex items-center gap-xs font-label-sm text-label-sm text-tertiary-container">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+<span>+34 this month</span>
+</div>
+<div class="absolute bottom-0 left-0 w-full h-[2px] bg-outline-variant group-hover:bg-primary transition-colors"></div>
+</div>
+</div>
+<!-- Bento Grid: Chart & Activity Table -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter h-[400px]">
+<!-- Chart Area (Span 8) -->
+<div class="lg:col-span-8 bg-surface rounded-lg border border-outline-variant flex flex-col h-full">
+<div class="p-md border-b border-outline-variant flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Diagnosis Trends</h3>
+<div class="flex items-center gap-sm">
+<button class="font-label-sm text-label-sm px-xs py-1 text-primary bg-primary-fixed rounded">Monthly</button>
+<button class="font-label-sm text-label-sm px-xs py-1 text-secondary hover:text-on-surface">Quarterly</button>
+</div>
+</div>
+<div class="flex-1 p-md relative flex items-end justify-between gap-2 overflow-hidden">
+<!-- Simulated Bar Chart using HTML/CSS -->
+<div class="absolute inset-0 p-md flex flex-col justify-between z-0 pointer-events-none opacity-20">
+<div class="w-full h-px bg-outline"></div>
+<div class="w-full h-px bg-outline"></div>
+<div class="w-full h-px bg-outline"></div>
+<div class="w-full h-px bg-outline"></div>
+<div class="w-full h-px bg-outline"></div>
+</div>
+<div class="w-full h-[40%] bg-primary-fixed rounded-t z-10 relative group"><div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-inverse-surface text-surface px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity">120</div></div>
+<div class="w-full h-[60%] bg-primary rounded-t z-10 relative group"><div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-inverse-surface text-surface px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity">180</div></div>
+<div class="w-full h-[30%] bg-primary-fixed rounded-t z-10 relative group"><div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-inverse-surface text-surface px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity">90</div></div>
+<div class="w-full h-[80%] bg-primary rounded-t z-10 relative group"><div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-inverse-surface text-surface px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity">240</div></div>
+<div class="w-full h-[50%] bg-primary-fixed rounded-t z-10 relative group"><div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-inverse-surface text-surface px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity">150</div></div>
+<div class="w-full h-[70%] bg-primary rounded-t z-10 relative group"><div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-inverse-surface text-surface px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity">210</div></div>
+<div class="w-full h-[45%] bg-primary-fixed rounded-t z-10 relative group"><div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-inverse-surface text-surface px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity">135</div></div>
+<div class="w-full h-[90%] bg-primary rounded-t z-10 relative group"><div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-inverse-surface text-surface px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 transition-opacity">270</div></div>
+</div>
+<div class="px-md pb-md flex justify-between font-label-sm text-label-sm text-secondary border-t border-outline-variant pt-2 mt-auto">
+<span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span>
+</div>
+</div>
+<!-- Recent Activity (Span 4) -->
+<div class="lg:col-span-4 bg-surface rounded-lg border border-outline-variant flex flex-col h-full">
+<div class="p-md border-b border-outline-variant flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Recent Activity</h3>
+<button class="font-label-sm text-label-sm text-primary hover:underline">View All</button>
+</div>
+<div class="flex-1 overflow-y-auto">
+<!-- High density table style rows -->
+<div class="flex items-center gap-sm px-md py-sm border-b border-outline-variant h-[48px] hover:bg-surface-container-low transition-colors cursor-pointer">
+<div class="w-2 h-2 rounded-full bg-tertiary-container shrink-0"></div>
+<div class="flex-1 min-w-0">
+<p class="font-label-sm text-label-sm text-on-surface truncate">New Diagnosis: Stage 2 Tremor</p>
+</div>
+<span class="font-body-sm text-body-sm text-secondary shrink-0 text-[11px]">2m ago</span>
+</div>
+<div class="flex items-center gap-sm px-md py-sm border-b border-outline-variant h-[48px] hover:bg-surface-container-low transition-colors cursor-pointer">
+<div class="w-2 h-2 rounded-full bg-primary shrink-0"></div>
+<div class="flex-1 min-w-0">
+<p class="font-label-sm text-label-sm text-on-surface truncate">Knowledge Base Updated</p>
+</div>
+<span class="font-body-sm text-body-sm text-secondary shrink-0 text-[11px]">1h ago</span>
+</div>
+<div class="flex items-center gap-sm px-md py-sm border-b border-outline-variant h-[48px] hover:bg-surface-container-low transition-colors cursor-pointer">
+<div class="w-2 h-2 rounded-full bg-tertiary-container shrink-0"></div>
+<div class="flex-1 min-w-0">
+<p class="font-label-sm text-label-sm text-on-surface truncate">New Patient Profile Created</p>
+</div>
+<span class="font-body-sm text-body-sm text-secondary shrink-0 text-[11px]">3h ago</span>
+</div>
+<div class="flex items-center gap-sm px-md py-sm border-b border-outline-variant h-[48px] hover:bg-surface-container-low transition-colors cursor-pointer">
+<div class="w-2 h-2 rounded-full bg-secondary-fixed-dim shrink-0"></div>
+<div class="flex-1 min-w-0">
+<p class="font-label-sm text-label-sm text-on-surface truncate">Symptom Ontology Sync</p>
+</div>
+<span class="font-body-sm text-body-sm text-secondary shrink-0 text-[11px]">5h ago</span>
+</div>
+<div class="flex items-center gap-sm px-md py-sm h-[48px] hover:bg-surface-container-low transition-colors cursor-pointer">
+<div class="w-2 h-2 rounded-full bg-error shrink-0"></div>
+<div class="flex-1 min-w-0">
+<p class="font-label-sm text-label-sm text-on-surface truncate">System Alert: High Load</p>
+</div>
+<span class="font-body-sm text-body-sm text-secondary shrink-0 text-[11px]">1d ago</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>
